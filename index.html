@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Numeros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="soma box">
+            <h2>Somando numeros</h2>
+            <input class="somaNumero01" type="number"> -
+            <input class="somaNumero02" type="number">
+            <input class="subtrair" type="button" value="Somar" onclick="somar()">
+            <p class="somaResultado">Resultado:</p>
+            <br>
+        </div>
+        <div class="subtracao box">
+            <h2>Subtraindo numeros</h2>
+            <input class="subNumero01" type="number"> -
+            <input class="subNumero02" type="number">
+            <input class="subtrair" type="button" value="Subtrair" onclick="subtrair()">
+            <p class="subResultado">Resultado:</p>
+            <br>
+        </div>
+        <div class="multiplicacao box">
+            <h2>Multiplicando numeros</h2>
+            <input class="multNumero01" type="number"> x
+            <input class="multNumero02" type="number">
+            <input class="multiplicar" type="button" value="Multiplicar" onclick="multiplicar()">
+            <p class="multResultado">Resultado:</p>
+            <br>
+        </div>
+        <div class="divisao box">
+            <h2>Dividindo numeros</h2>
+            <input class="divNumero01" type="number"> ÷
+            <input class="divNumero02" type="number">
+            <input class="dividir" type="button" value="Dividir" onclick="dividir()">
+            <p class="divResultado">Resultado:</p>
+        </div>
+    </main>
+    <script>
+        function somar(){
+            var somaNumero01 = window.document.querySelector(`input.somaNumero01`)
+            var somaNumero02 = window.document.querySelector(`input.somaNumero02`)
+            var somar = window.document.querySelector(`input.somar`)
+            var res = window.document.querySelector(`p.somaResultado`)
+            var n1 = Number(somaNumero01.value)
+            var n2 = Number(somaNumero02.value)
+            var somar = n1 + n2
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${somar}</strong>`
+        }
+        
+        function subtrair(){
+            var subNumero01 = window.document.querySelector(`input.subNumero01`)
+            var subNumero02 = window.document.querySelector(`input.subNumero02`)
+            var subtrair = window.document.querySelector(`input.subtrair`)
+            var res = window.document.querySelector(`p.subResultado`)
+            var n1 = Number(subNumero01.value)
+            var n2 = Number(subNumero02.value)
+            var subtrair = n1 - n2
+            res.innerHTML = `A subtração entre ${n1} - ${n2} é igual a <strong>${subtrair}</strong>`
+        } 
+
+        function multiplicar(){
+            var multNumero01 = window.document.querySelector(`input.multNumero01`)
+            var multNumero02 = window.document.querySelector(`input.multNumero02`)
+            var multiplicar = window.document.querySelector(`input.multiplicar`)
+            var res = window.document.querySelector(`p.multResultado`)
+            var n1 = Number(multNumero01.value)
+            var n2 = Number(multNumero02.value)
+            var multiplicar = n1 * n2
+            res.innerHTML = `A multiplicação entre ${n1} x ${n2} é igual a <strong>${multiplicar}</strong>`
+        }
+
+        function dividir(){
+            var divNumero01 = window.document.querySelector(`input.divNumero01`)
+            var divNumero02 = window.document.querySelector(`input.divNumero02`)
+            var dividir = window.document.querySelector(`input.dividir`)
+            var res = window.document.querySelector(`p.divResultado`)
+            var n1 = Number(divNumero01.value)
+            var n2 = Number(divNumero02.value)
+            var dividir = n1 / n2
+            res.innerHTML = `A divisão entre ${n1} ÷ ${n2} é igual a <strong>${dividir}</strong>`
+        }
+    </script>
+</body>
+</html>
